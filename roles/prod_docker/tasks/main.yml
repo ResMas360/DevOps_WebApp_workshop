@@ -1,0 +1,61 @@
+---
+- name: install required software
+  package:
+    name:  '{{ item }}'
+    state: present
+  with_items:
+    - lvm2
+    - device-mapper-persistent-data
+    - yum-utils
+    - git
+
+- name: add GPG key for docker
+  rpm_key:
+    key: https://download.docker.com/linux/centos/gpg
+    state: present
+
+- name: add docker repo
+  command: sudo yum-config-manager --add-repo \
+           https://download.docker.com/linux/centos/docker-ce.repo
+
+- name: install docker
+  package:
+    name: docker-ce
+    state: present
+
+- name: start and enable docker
+  service:
+    name: docker
+    state: started
+    enabled: yes
+
+- user:
+    name: vagrant
+    groups: docker
+    append: yes
+
+- user:
+    name: jenkins
+    comment: "jenkins user"
+    home: /home/jenkins
+    groups: wheel,docker
+    append: yes
+
+#- file:
+#    path: /home/jenkins/.ssh
+#    owner: jenkins
+#    mode: 0700
+#    state: directory
+
+#- file:
+#    path: /home/jenkins/.ssh/authorized_keys
+#    owner: jenkins
+#    mode: 0640
+#    state: directory
+
+#- copy:
+#    src: /vagrant/id_rsa.pub
+#    dest: /home/jenkins/.ssh/authorized_keys/id_rsa.pub
+#    owner: jenkins
+#    group: jenkins
+#    mode: 0640

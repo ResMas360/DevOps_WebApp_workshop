@@ -1,2 +1,4 @@
 .vagrant/
 *.retry
+app/node_modules/
+app/.eslint*

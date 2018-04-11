@@ -1,7 +1,0 @@
-# ops machine
-[ops]
-192.168.1.2
-
-# prod machine
-[prod]
-192.168.1.3

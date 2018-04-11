@@ -44,8 +44,3 @@
     generate_ssh_key: yes
     groups: wheel,docker
     append: yes
-
-- name: copy ssh key to vagrant folder
-  copy:
-    src: /home/jenkins/.ssh/id_rsa.pub
-    dest: /vagrant/id_rsa.pub

@@ -41,21 +41,5 @@
     groups: wheel,docker
     append: yes
 
-#- file:
-#    path: /home/jenkins/.ssh
-#    owner: jenkins
-#    mode: 0700
-#    state: directory
-
-#- file:
-#    path: /home/jenkins/.ssh/authorized_keys
-#    owner: jenkins
-#    mode: 0640
-#    state: directory
-
-#- copy:
-#    src: /vagrant/id_rsa.pub
-#    dest: /home/jenkins/.ssh/authorized_keys/id_rsa.pub
-#    owner: jenkins
-#    group: jenkins
-#    mode: 0640
+- name: pull centos 7 image from dockerhub
+    command: docker pull centos:centos7

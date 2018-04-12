@@ -9,7 +9,7 @@ The application architecture uses [Jenkins](https://jenkins.io/), [docker](https
 See the diagram below for a depiction of the complete architecture.
 
 
-<img src="99_resources/architecture_diagram.png" width="100%">
+<img src="06_resources/architecture_diagram.png" width="100%">
 
 ## Prerequisites
 
@@ -29,20 +29,10 @@ This will allow us to create Virtual Machines on our host machine
 
 ## Modules
 
-This workshop is broken up into multiple modules. For building out your website, you must complete the following module in order before proceeding to the next:
+This workshop is broken up into multiple modules. For building out your website, you must complete the following modules in order before proceeding to the next:
 
-1. [Build the infrastructure using vagrant](01_LexBotInformational)
-1. [Enabling passwordless SSH on our infrastructure](02_LexBotSubscribeService)
-
-Once you have a working Lex chatbot, you can choose to complete one or more of the following modules to integrate your Lex chatbot to different channels to interface with your customer:
-
-* [Integrate Lex chatbot with Amazon Connect (voice over the phone)](03_AmazonConnectIntegration)
-* [Integrate Lex chatbot with Twilio SMS (text over SMS)](04_TwilioSMSIntegration)
-
-Extra credit ideas:
-
-* [Extra credit](10_ExtraCredit)
-
-Resource cleanup:
-
-* [Resource clean-up](11_Cleanup)
+1. [Build the infrastructure using vagrant](01_SetupVagrant)
+1. [Enabling passwordless SSH on our infrastructure](02_PasswordlessSSH)
+1. [Add the SSH key to Github](03_AddGithubKey)
+1. [Configure Jenkins](04_ConfigureJenkins)
+1. [Run project](05_RunProject)

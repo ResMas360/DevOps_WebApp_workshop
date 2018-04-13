@@ -9,7 +9,7 @@ The first job will run our project's unit tests and, if it is successful, deploy
 
 1. From the Jenkins home page, click on **New item**
 
-<img src="images/newitem.png" alt="" width="100">
+<img src="images/newitem.png" alt="" width="100%">
 
 1. Enter **Unit_test** as the name for the job and select **Freestyle project**. Click **OK**
 
@@ -18,7 +18,7 @@ The first job will run our project's unit tests and, if it is successful, deploy
 1. On **Source Code Management** select **Git** and add the repo's clone URL on the **Repository URL** text box.
 On the **Credentials** dropdown menu, select "jenkins"
 
-<img src="images/job1scm.png" alt="" width="100">
+<img src="images/job1scm.png" alt="" width="100%">
 
 1. On **Build Environment** select **Delete workspace before build starts**.
 
@@ -31,7 +31,7 @@ npm i --save-dev
 node_modules/mocha/bin/mocha test
 ```
 
-<img src="images/job2buildexecuteShell.png" alt="" width="">
+<img src="images/job2buildexecuteShell.png" alt="" width="100%">
 
 1. Click **Save**
 
@@ -42,7 +42,7 @@ To test the job, click on **Build Now**
 
 1. From the Jenkins home page, click on **New item**
 
-<img src="images/newitem.png" alt="" width="100">
+<img src="images/newitem.png" alt="" width="100%">
 
 1. Enter **deploy_app** as the name for the job and select **Freestyle project**. Click **OK**
 
@@ -51,7 +51,7 @@ To test the job, click on **Build Now**
 1. On **Build Triggers** select **Build after other projects are built** and add the name of the previous job on the **Projects to watch** text box.
 Click **Trigger only if build is stable**
 
-<img src="images/job2buildtrigger.png" alt="" width="100">
+<img src="images/job2buildtrigger.png" alt="" width="100%">
 
 1. On **Build** click on **Add build step** and select **Execute shell**
 
@@ -68,7 +68,7 @@ ssh -i /var/jenkins_home/.ssh/id_rsa jenkins@192.168.1.3 chmod 700 /home/jenkins
 ssh -i /var/jenkins_home/.ssh/id_rsa jenkins@192.168.1.3 /home/jenkins/tmp/deploy_app.sh
 ```
 
-<img src="images/job2buildexecuteShell.png" alt="" width="100">
+<img src="images/job2buildexecuteShell.png" alt="" width="100%">
 
 1. Click **Save**
 
@@ -76,11 +76,11 @@ ssh -i /var/jenkins_home/.ssh/id_rsa jenkins@192.168.1.3 /home/jenkins/tmp/deplo
 
 1. On the **Post-build Actions** section click **Add post-build Actions** and select **Build other projects**
 
-<img src="images/job1postbuild.png" alt="" width="100">
+<img src="images/job1postbuild.png" alt="" width="100%">
 
 1. Enter the project name **deploy_app** and select **Trigger only if build is stable**
 
-<img src="images/job1postbuildtrigger.png" alt="" width="100">
+<img src="images/job1postbuildtrigger.png" alt="" width="100%">
 
 To test the job, click on **Build Now**
 **Note** if the jobs fails with **Host key verification failed** try running **docker exec -u root -it jenkins-kt bash** and then **ssh -i /var/jenkins_home/.ssh/id_rsa jenkins@192.168.1.3 rm -rf /home/jenkins/tmp/** from the ops machine.

@@ -42,4 +42,4 @@
     append: yes
 
 - name: pull centos 7 image from dockerhub
-    command: docker pull centos:centos7
+  command: docker pull centos:centos7

@@ -15,15 +15,15 @@ For our demo, we will use SSH keys to authenticate our jenkins box with GitHub a
 
 1. Go to https://github.com/ and log on to your account. Onced logged in, open *Settings* section from the drop down menu on the top right corner of the home screen.
 
-<img src="images/profile.png" alt="" width="120%">
+<img src="images/profile.png" alt="" width="100%">
 
 1. On the *Public profile* screen, click on *SSH and GPG keys* from the *personal settings* column.
 
-<img src="images/ssh_key.png" alt="" width="120%">
+<img src="images/sshkey.png" alt="" width="100%">
 
 1. Click *New SSH key* on the *SSH Keys* section.
 
-<img src="images/new_ssh_key.png" alt="" width="120%">
+<img src="images/newsshkey.png" alt="" width="120%">
 
 1. On the *SSH Keys / Add new* page, add "jenkins" to to *Title* box and go back to the Git Bash console.
 Type *cat /home/jenkins/.ssh/id_rsa.pub* and copy the key (there is no need to copy the key's comment).
@@ -31,7 +31,7 @@ Paste the key on the "Key" box in the GitHub page.
 
 1. Once the key has been pasted, click *Add SSH Key*. This action may request you for the password.
 
-<img src="images/key_added.png" alt="" width="120%">
+<img src="images/keyadded.png" alt="" width="120%">
 
 ## Cloning from GitHub using SSH keys
 
@@ -39,7 +39,7 @@ On Git Bash try cloning any of your available GitHub projects using SSH keys
 
 1. On the project's page, click on *clone or download* and select the *Use SSH* option from the dropdown menu.
 
-	<img src="images/Clone_ssh.png" alt="" width="120%">
+	<img src="images/Clonessh.png" alt="" width="120%">
 
 1. On Git Bash, create a folder called "tpm" and change to it, by using *mkdir tmp/ && cd tmp/*.
 

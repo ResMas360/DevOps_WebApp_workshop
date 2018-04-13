@@ -13,23 +13,23 @@ For our demo, we will use SSH keys to authenticate our jenkins box with GitHub a
 
 ## Implementation Instructions
 
-1. Go to https://github.com/ and log on to your account. Onced logged in, open *Settings* section from the drop down menu on the top right corner of the home screen.
+1. Go to https://github.com/ and log on to your account. Onced logged in, open **Settings** section from the drop down menu on the top right corner of the home screen.
 
 <img src="images/profile.png" alt="" width="100%">
 
-1. On the *Public profile* screen, click on *SSH and GPG keys* from the *personal settings* column.
+1. On the **Public profile** screen, click on **SSH and GPG keys** from the **personal settings** column.
 
 <img src="images/sshkey.png" alt="" width="100%">
 
-1. Click *New SSH key* on the *SSH Keys* section.
+1. Click **New SSH key** on the **SSH Keys** section.
 
 <img src="images/newsshkey.png" alt="" width="120%">
 
-1. On the *SSH Keys / Add new* page, add "jenkins" to to *Title* box and go back to the Git Bash console.
-Type *cat /home/jenkins/.ssh/id_rsa.pub* and copy the key (there is no need to copy the key's comment).
+1. On the **SSH Keys / Add new** page, add "jenkins" to **Title** box and go back to the Git Bash console.
+Type **cat /home/jenkins/.ssh/id_rsa.pub** and copy the key (there is no need to copy the key's comment).
 Paste the key on the "Key" box in the GitHub page.
 
-1. Once the key has been pasted, click *Add SSH Key*. This action may request you for the password.
+1. Once the key has been pasted, click **Add SSH Key**. This action may request you for the password.
 
 <img src="images/keyadded.png" alt="" width="120%">
 
@@ -37,16 +37,16 @@ Paste the key on the "Key" box in the GitHub page.
 
 On Git Bash try cloning any of your available GitHub projects using SSH keys
 
-1. On the project's page, click on *clone or download* and select the *Use SSH* option from the dropdown menu.
+1. On the project's page, click on **clone or download** and select the **Use SSH** option from the dropdown menu.
 
 	<img src="images/Clonessh.png" alt="" width="120%">
 
-1. On Git Bash, create a folder called "tpm" and change to it, by using *mkdir tmp/ && cd tmp/*.
+1. On Git Bash, create a folder called "tpm" and change to it, by using **mkdir tmp/ && cd tmp/**.
 
-1. Clone the project using the URL obtained from GitHub (*git clone git@github.com:"user"/"project_name.git*).
+1. Clone the project using the URL obtained from GitHub (**git clone git@github.com:"user"/"project_name.git**).
 Cloning using SSH keys should not ask for the password.
 
-1. once it has been cloned, delete this "tmp" folder *cd .. && rm -rf ./tmp*
+1. once it has been cloned, delete this "tmp" folder **cd .. && rm -rf ./tmp**
 
 
 ### Next module

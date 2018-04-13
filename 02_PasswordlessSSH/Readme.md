@@ -13,30 +13,30 @@ The SSH keys have already been created as part of the Ansible tasks.
 
 ## Implementation Instructions
 
-1. Log on to the prod machine by typing *vagrant ssh prod*
+1. Log on to the prod machine by typing **vagrant ssh prod**
 
-1. Switch to the *root* user with *sudo su*
+1. Switch to the **root** user with **sudo su**
 
-1. Change the password for the user jenkins with *passwd jenkins*, for this demo we will use a simple password such as "123456".
+1. Change the password for the user jenkins with **passwd jenkins**, for this demo we will use a simple password such as "123456".
 
-1. *exit* the "prod" box and log on to the "ops" machine with *vagrant ssh ops*.
+1. **exit** the "prod" box and log on to the "ops" machine with **vagrant ssh ops**.
 
-1. Switch to the *root* user with *sudo su*
+1. On the prod machine, switch to the **root** user with **sudo su**
 
-1. Change the password for the user jenkins with *passwd jenkins*, for this demo we will use a simple password such as "123456".
+1. Change the password for the user jenkins with **passwd jenkins**, for this demo we will use a simple password such as "123456".
 
-1. Switch to the jenkins user with *su - jenkins* to complete the following steps.
+1. Switch to the jenkins user with **su - jenkins** to complete the following steps.
 Note: It is normal for the password to be requested on each step.
 
-1. Create the *.ssh* folder on the prod box (192.168.1.3) with *ssh jenkins@192.168.1.3 mkdir -p /home/jenkins/.ssh*.
+1. Create the **.ssh** folder on the prod box (192.168.1.3) with **ssh jenkins@192.168.1.3 mkdir -p /home/jenkins/.ssh**.
 
-1. Copy the *id_rsa.pub* public key on the "prod" box with
- *cat /home/jenkins/.ssh/id_rsa.pub | ssh jenkins@192.168.1.3 'cat >> /home/jenkins/.ssh/authorized_keys'*.
+1. Copy the **id_rsa.pub** public key on the "prod" box with
+ **cat /home/jenkins/.ssh/id_rsa.pub | ssh jenkins@192.168.1.3 'cat >> /home/jenkins/.ssh/authorized_keys'**.
 
  1. Change the permissions on the previously created remote folders with:
- *ssh jenkins@192.168.1.3 "chmod 700 /home/jenkins/.ssh; chmod 640 /home/jenkins/.ssh/authorized_keys"*
+ **ssh jenkins@192.168.1.3 "chmod 700 /home/jenkins/.ssh; chmod 640 /home/jenkins/.ssh/authorized_keys"**
 
-1. Review that the user "jenkins" can now run passwordless remote commands with *ssh jenkins@192.168.1.3 hostname*
+1. Review that the user "jenkins" can now run passwordless remote commands with **ssh jenkins@192.168.1.3 hostname**
 
 ### Next module
 

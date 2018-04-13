@@ -9,7 +9,7 @@ The first job will run our project's unit tests and, if it is successful, deploy
 
 1. From the Jenkins home page, click on *New item*
 
-<img src="images/new_item.png" alt="" width="">
+<img src="images/newitem.png" alt="" width="">
 
 1. Enter a name for the job and select *Freestyle project*. Click *OK*
 
@@ -18,7 +18,7 @@ The first job will run our project's unit tests and, if it is successful, deploy
 1. On *Source Code Management* select *Git* and add the repo's clone URL on the *Repository URL* text box.
 On the *Credentials* dropdown menu, select "jenkins"
 
-<img src="images/job1_scm.png" alt="" width="">
+<img src="images/job1scm.png" alt="" width="">
 
 1. On *Build Environment* select *Delete workspace before build starts*.
 
@@ -29,7 +29,7 @@ On the *Credentials* dropdown menu, select "jenkins"
 *npm i --save-dev*
 *node_modules/mocha/bin/mocha test*
 
-<img src="images/job2_build_executeShell.png" alt="" width="">
+<img src="images/job2buildexecuteShell.png" alt="" width="">
 
 1. Click *Save*
 
@@ -40,7 +40,7 @@ To test the job, click on *Build Now*
 
 1. From the Jenkins home page, click on *New item*
 
-<img src="images/new_item.png" alt="" width="">
+<img src="images/newitem.png" alt="" width="">
 
 1. Enter a name for the job and select *Freestyle project*. Click *OK*
 
@@ -49,7 +49,7 @@ To test the job, click on *Build Now*
 1. On *Build Triggers* select *Build after other projects are built* and add the name of the previous job on the *Projects to watch* text box.
 Click *Trigger only if build is stable*
 
-<img src="images/job2_build_trigger.png" alt="" width="">
+<img src="images/job2buildtrigger.png" alt="" width="100">
 
 
 1. On *Build* click on *Add build step* and select *Execute shell*
@@ -65,7 +65,7 @@ ssh -i /var/jenkins_home/.ssh/id_rsa jenkins@192.168.1.3 tar -xvf /home/jenkins/
 ssh -i /var/jenkins_home/.ssh/id_rsa jenkins@192.168.1.3 chmod 700 /home/jenkins/tmp/deploy_app.sh
 ssh -i /var/jenkins_home/.ssh/id_rsa jenkins@192.168.1.3 /home/jenkins/tmp/deploy_app.sh
 
-<img src="images/job2_build_executeShell.png" alt="" width="">
+<img src="images/job2buildexecuteShell.png" alt="" width="100">
 
 1. Click *Save*
 

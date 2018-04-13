@@ -9,7 +9,7 @@ The application architecture uses [Jenkins](https://jenkins.io/), [docker](https
 See the diagram below for a depiction of the complete architecture.
 
 
-<img src="06_resources/architecture_diagram.png" width="100%">
+<img src="0505_RunProject/images/architecturediagram.png" width="100%">
 
 ## Prerequisites
 

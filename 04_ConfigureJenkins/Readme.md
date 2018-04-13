@@ -38,11 +38,12 @@ docker exec -u root -it jenkins-kt chown jenkins:jenkins /var/jenkins_home/.ssh/
 
 1. Test that the container can also perform passwordless SSH commands on the prod box:
 **docker exec -u jenkins -it jenkins-kt ssh jenkins@192.168.1.3 hostname**
+**docker exec -u root -it jenkins-kt ssh -i /var/jenkins_home/.ssh/id_rsa jenkins@192.168.1.3 hostname**
 The response should be the hostname of our production box.
 
 Jenkins should now be reachable from the browser (safari, chrome, firefox, etc) on *http://192.168.1.2:8080*
 
-	<img src="images/jenkinsfirstrun.png" alt="" width="">
+	<img src="images/jenkinsfirstrun.png" alt="" width="100">
 
 
 ## Configure Jenkins
@@ -52,39 +53,39 @@ Copy and past it in the **Administrator password** text box.
 
 1. Click continue
 
-<img src="images/jenkinsadminpass.png" alt="" width="">
+<img src="images/jenkinsadminpass.png" alt="" width="100">
 
 1. Select **Install suggested plugins** and wait for the process to complete
 
 1. Once the plugins are installed, you will be presented with the **Create First Admin User** page.
 Complete the form with information requested and click **Save and Finish**
 
-<img src="images/admininfo.png" alt="" width="">
+<img src="images/admininfo.png" alt="" width="100">
 
 1. On the next window, click on **Start using Jenkins**
 
 1. On the column to the left, click on **Credentials**
 
-<img src="images/maintocredentials.png" alt="" width="">
+<img src="images/maintocredentials.png" alt="" width="100">
 
 1. On the **Credentials** page, click on the **Jenkins** user under **Stores scoped to Jenkins**
 
-<img src="images/credentialspage.png" alt="" width="">
+<img src="images/credentialspage.png" alt="" width="100">
 
 1. On the **System** page, click on the **Global credentials**
 
-<img src="images/credentialsglobal.png" alt="" width="">
+<img src="images/credentialsglobal.png" alt="" width="100">
 
 1. On the **Global credentials (unrestricted)** page, click **Add Credentials** located in the left column.
 
-<img src="images/addcredentials.png" alt="" width="">
+<img src="images/addcredentials.png" alt="" width="100">
 
 1. On the next page, select **SSH Username with private key** on **kind**
 On **Username** type **jenkins**
 On **Private Key** select **From the Jenkins master ~/.ssh**
 Click **OK**     
 
-<img src="images/credentialinfo.png" alt="" width="">
+<img src="images/credentialinfo.png" alt="" width="100">
 
 
 ## Setting up the first job
@@ -93,24 +94,24 @@ We will create a job that clones our GitHub project
 
 1. From the Jenkins home page, click on **New item**
 
-<img src="images/newitem.png" alt="" width="">
+<img src="images/newitem.png" alt="" width="100">
 
 1. Enter a name for the job and select **Freestyle project**. Click **OK**
 
 1. On **General** add a description and select **GitHub project** to add the project's URL
 
-<img src="images/job1general.png" alt="" width="">
+<img src="images/job1general.png" alt="" width="100">
 
 1. On **Source Code Management** select **Git** and add the repo's clone URL on the **Repository URL** text box.
 On the **Credentials** dropdown menu, select "jenkins"
 
-<img src="images/job1scm.png" alt="" width="">
+<img src="images/job1scm.png" alt="" width="100">
 
 1. On **Build Environment** select **Delete workspace before build starts**.
 
 1. On **Build** click on **Add build step** and select **Execute shell**
 
-<img src="images/job1buildexecuteShell.png" alt="" width="">
+<img src="images/job1buildexecuteShell.png" alt="" width="100">
 
 1. On the **Command** box, type **git log**. This will connect to GitHub, download the project and run the "git log" command.
 

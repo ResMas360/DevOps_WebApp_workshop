@@ -9,7 +9,7 @@ The first job will run our project's unit tests and, if it is successful, deploy
 
 1. From the Jenkins home page, click on **New item**
 
-<img src="images/newitem.png" alt="" width="">
+<img src="images/newitem.png" alt="" width="100">
 
 1. Enter **Unit_test** as the name for the job and select **Freestyle project**. Click **OK**
 
@@ -18,7 +18,7 @@ The first job will run our project's unit tests and, if it is successful, deploy
 1. On **Source Code Management** select **Git** and add the repo's clone URL on the **Repository URL** text box.
 On the **Credentials** dropdown menu, select "jenkins"
 
-<img src="images/job1scm.png" alt="" width="">
+<img src="images/job1scm.png" alt="" width="100">
 
 1. On **Build Environment** select **Delete workspace before build starts**.
 
@@ -42,7 +42,7 @@ To test the job, click on **Build Now**
 
 1. From the Jenkins home page, click on **New item**
 
-<img src="images/newitem.png" alt="" width="">
+<img src="images/newitem.png" alt="" width="100">
 
 1. Enter **deploy_app** as the name for the job and select **Freestyle project**. Click **OK**
 

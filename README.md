@@ -2,7 +2,7 @@
 
 Jenkins is a powerful CI/CD orchestration tool that allows us to build pipelines that test our apps and builds them.
 
-In this workshop, you will build a meme website. This site will evolve from showing static images to a random image. The application needs to change the image displayed everytime a user logs into the site.
+In this workshop, you will build a meme website. This site will only be deployed to its container when all test pass.
 
 The application architecture uses [Jenkins](https://jenkins.io/), [docker](https://www.docker.com/), [ansible](https://www.ansible.com/) and [vagrant](https://www.vagrantup.com/). You will build the needed infrastructure that hosts our project website. The  configuration will be done through roles while the apps will be hosted on containers.  
 

@@ -6,14 +6,14 @@ At completion of this module you will be able to log on to the virtual machines 
 
 ##  Vagrant
 The first thing that needs to be done, is to create the two virtual machines that will hot the project. We will use Vagrant for this.
-In the folder you will find a file called **Vagrantfile** which tells vagrant details such as network information, the type of images we need and how to provision the virtual machines at boot time.
+In the folder you will find a file called **"Vagrantfile"** which tells vagrant details such as network information, the type of images we need and how to provision the virtual machines at boot time.
 
 ## Creating the virtual machines
 
-To create the virtual machines open gitbash and type **vagrant up**. This will start the machines and provision them.
+To create the virtual machines open gitbash and type **"vagrant up"**. This will start the machines and provision them.
 The files used to provision each machine are **configure_ops_machine.sh** and **configure_prod_machine.sh**, both files are SHELL scripts that will install Ansible and playbooks.
 
-After the machines have been created, check their status with the **vagrant status** command.
+After the machines have been created, check their status with the **"vagrant status"** command.
 
 ### What has happened so far?
 

@@ -31,6 +31,7 @@ This will allow us to create Virtual Machines on our host machine
 
 This workshop is broken up into multiple modules. For building out your website, you must complete the following modules in order before proceeding to the next:
 
+1. [Download the tools](00_getTheTools)
 1. [Build the infrastructure using vagrant](01_SetupVagrant)
 1. [Enabling passwordless SSH on our infrastructure](02_PasswordlessSSH)
 1. [Add the SSH key to Github](03_AddGithubKey)

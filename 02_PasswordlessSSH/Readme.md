@@ -21,7 +21,7 @@ The SSH keys have already been created as part of the Ansible tasks.
 
 1. **"exit"** the "prod" box and log on to the "ops" machine with **"vagrant ssh ops"**.
 
-1. On the prod machine, switch to the **root** user with **"sudo su"**
+1. On the ops machine, switch to the **root** user with **"sudo su"**
 
 1. Change the password for the user jenkins with **"passwd jenkins"**, for this demo we will use a simple password such as "123456".
 

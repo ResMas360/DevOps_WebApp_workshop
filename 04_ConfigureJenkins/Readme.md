@@ -18,13 +18,13 @@ Docker can create images that will run on our containers, these can be base imag
 
 1. Go to the project's "jenkins" folder **cd /vagrant/jenkins** and check that the Dockerfile is on this folder.
 
-1. To build and tag our jenkins docker image type **docker build -t npmjenkins:v1 .**.
+1. To build and tag our jenkins docker image type **"docker build -t npmjenkins:v1 ."**.
 This will download the Jenkins LTS base image and install Nodejs and NPM on top of it.
 
-1. Confirm that the npmjenkins image was created by typing **docker image ls**.
+1. Confirm that the npmjenkins image was created by typing **docker image ls**
 
 1. Create the jenkins container with
-**docker run -d --name jenkins-kt -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home npmjenkins:v1**.
+**docker run -d --name jenkins-kt -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home npmjenkins:v1**
 
 1. Confirm that the container is running with **docker container ps -a**.
 
